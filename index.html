@@ -15,16 +15,16 @@
         body {
             width: 100vw;
             background-color: #f5f5f5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: start;
+            justify-content: center;
             align-items: center;
         }
 
 
         .section-1 {
-            width: 50%;
+            width: 80%;
             height: 12rem;
             background-color: #aed6f1 ;
             border-left: 1px solid #34495e;
@@ -33,19 +33,15 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items: center;
+            align-items:center ;
         }
-        .section-6 {
-            width: 50%;
+        /* .section-6 {
+            width: 80%;
             height: 3rem;
             background-color: #aed6f1 ;
             border: 1px solid #34495e;
 
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
+        } */
 
         .profile-img-section {
             width: 40%;
@@ -64,16 +60,14 @@
             align-items: end;
         }
 
-
         .profile-img {
             height: 8rem;
             width: 8rem;
             border-radius: 50%;
         }
 
-
         .section-2 {
-            width: 50%;
+            width: 80%;
             height: 9rem;
             /* background-color: aquamarine; */
             border-left: 1px solid #34495e;
@@ -87,7 +81,7 @@
 
 
         .section-3 {
-            width: 50%;
+            width: 80%;
             height: 20rem;
             /* background-color: aquamarine; */
             border-left: 1px solid #34495e;
@@ -101,20 +95,8 @@
 
 
         .section-4 {
-            width: 50%;
-            height: 12rem;
-            /* background-color: aquamarine; */
-            border-left: 1px solid #34495e;
-            border-right: 1px solid #34495e;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            /* padding: 10px; */
-        }
-        .section-5 {
-            width: 50%;
-            height: 10rem;
+            width: 80%;
+            height: 19rem;
             /* background-color: aquamarine; */
             border-left: 1px solid #34495e;
             border-right: 1px solid #34495e;
@@ -125,6 +107,18 @@
             /* padding: 10px; */
         }
 
+        .section-5 {
+            width: 80%;
+            height: 10rem;
+            /* background-color: aquamarine; */
+            border-left: 1px solid #34495e;
+            border-right: 1px solid #34495e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            /* padding: 10px; */
+        }
 
         .section-title {
             /* height: 10%; */
@@ -162,19 +156,43 @@
             margin-left: 2vh;
             padding-bottom: 3vh;
         }
-        .style {
-            color: black;
-            font-size: 25px;
-            cursor: pointer;
-        }
         .para {
-            display: block;
+            padding: 10px;
+        }
+        /* .flex-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        } */
+
+        .section-6 {
+            width: 80%;
+            height: 4rem;
+            border-left: 1px solid #34495e;
+            border-right: 1px solid #34495e;
+            border-bottom: 1px solid #34495e;
+
+        }
+        .button {
+            padding-right: 2rem;
+            padding-left: 2rem;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+        .button-style {
+            font-size: 25px;
+            color: black;
         }
         .flex-item {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
+            flex-direction: row;
+            /* align-items: center; */
+            justify-content: center;
+            gap: 1rem;
         }
     </style>
 </head>
@@ -256,16 +274,16 @@
     <div class="section-6">
         <div class="flex-item">
             <a href="tel:9489858821" target="_blank">
-                <i class="fa-solid fa-phone style"></i>
+                <button class="button"><i class="fa-solid fa-phone button-style"></i></button>
             </a>
             <a href="mailto:vasanthkrish.s2004@gmail.com" target="_blank">
-                <i class="fa-solid fa-envelope style"></i>
+                <button class="button"><i class="fa-solid fa-envelope button-style"></i></button>
             </a>
             <a href="https://github.com/vasanthkrishnan" target="_blank">
-                <i class="fa-brands fa-github style"></i>
+                <button class="button"><i class="fa-brands fa-github button-style"></i></button>
             </a>
             <a href="https://www.linkedin.com/in/vasanthkrish2004" target="_blank">
-                <i class="fa-brands fa-linkedin style"></i>
+                <button class="button"><i class="fa-brands fa-linkedin button-style"></i></button>
             </a>
         </div>
     </div>

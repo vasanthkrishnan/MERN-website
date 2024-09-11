@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Document</title>
     <style>
         * {
@@ -12,7 +13,6 @@
 
 
         body {
-            height: 100vh;
             width: 100vw;
             background-color: #f5f5f5;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,13 +26,26 @@
         .section-1 {
             width: 50%;
             height: 12rem;
-            background-color: aquamarine;
+            background-color: #aed6f1 ;
+            border-left: 1px solid #34495e;
+            border-right: 1px solid #34495e;
+            border-top: 1px solid #34495e;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
         }
+        .section-6 {
+            width: 50%;
+            height: 3rem;
+            background-color: #aed6f1 ;
+            border: 1px solid #34495e;
 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
 
         .profile-img-section {
             width: 40%;
@@ -61,9 +74,10 @@
 
         .section-2 {
             width: 50%;
-            height: 12rem;
+            height: 9rem;
             /* background-color: aquamarine; */
-            border: 1px solid aquamarine;
+            border-left: 1px solid #34495e;
+            border-right: 1px solid #34495e;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -76,7 +90,8 @@
             width: 50%;
             height: 20rem;
             /* background-color: aquamarine; */
-            border: 1px solid aquamarine;
+            border-left: 1px solid #34495e;
+            border-right: 1px solid #34495e;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -87,9 +102,22 @@
 
         .section-4 {
             width: 50%;
-            height: 15rem;
+            height: 12rem;
             /* background-color: aquamarine; */
-            border: 1px solid aquamarine;
+            border-left: 1px solid #34495e;
+            border-right: 1px solid #34495e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            /* padding: 10px; */
+        }
+        .section-5 {
+            width: 50%;
+            height: 10rem;
+            /* background-color: aquamarine; */
+            border-left: 1px solid #34495e;
+            border-right: 1px solid #34495e;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -101,7 +129,7 @@
         .section-title {
             /* height: 10%; */
             margin-left: 1vh;
-            color: aquamarine;
+            color: #21618c;
             font-weight: bold;
             padding-bottom: 10px;
         }
@@ -118,13 +146,35 @@
             padding: 1rem;
             border: 1px solid gray;
         }
+        .ed-table th:nth-child(2), .ed-table td:nth-child(2) {
+            width: 20rem;
+        }
 
-
+        li {
+            margin-left: 2rem;
+            list-style: square;
+        }
         .companies {
             font-weight: bold;
-
-
-            color: aquamarine;
+            color: #21618c;
+        }
+        .section-4 p {
+            margin-left: 2vh;
+            padding-bottom: 3vh;
+        }
+        .style {
+            color: black;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .para {
+            display: block;
+        }
+        .flex-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
         }
     </style>
 </head>
@@ -144,7 +194,7 @@
         <h1 class="section-title">
             Objective
         </h1>
-        <p>
+        <p class="para">
             kjfsdlkfj dlfsdoifoeildf sdjdfueflkjfds dslfjoiefdslkfj dkfjoiejfldsjfnvoisdfe ddjfjeoifjdslkjf sdifjeoildsjf 
         </p>
     </div>
@@ -159,19 +209,19 @@
                 <th>Score</th>
             </tr>
             <tr>
-                <td>Dog-1</td>
-                <td>School-1</td>
+                <td>HSC</td>
+                <td>Noyes Matric Hr.Sec. School</td>
                 <td>90%</td>
             </tr>
             <tr>
-                <td>Dog-1</td>
-                <td>School-1</td>
+                <td>SSLC</td>
+                <td>Noyes Matric Hr.Sec. School</td>
                 <td>90%</td>
             </tr>
             <tr>
-                <td>Dog-1</td>
-                <td>School-1</td>
-                <td>90%</td>
+                <td>B.Tech. IT</td>
+                <td>Sri shakthi Institute of Eng & Tech.</td>
+                <td>8.42</td>
             </tr>
         </table>
     </div>
@@ -179,11 +229,45 @@
         <h1 class="section-title">
             Internship
         </h1>
-        <p>
-
-        </p><br>
-        <p></p>
+        <p class="para">
+            <span class="companies">ACCOUNT MANAGER / VANARSDEL, LTD</span>
+            JUNE 2024 PRESENT
+            Managed and grew key account by developing strong relation
+            implementing effective sales strategies
+        </p>
+        <p class="para">
+            <span class="companies">ACCOUNT MANAGER / VANARSDEL, LTD</span>
+            JUNE 2024 PRESENT
+            Managed and grew key account by developing strong relation
+            implementing effective sales strategies
+        </p>
     </div>
-    <div class="section-5"></div>
+    <div class="section-5">
+        <h1 class="section-title">
+            Skills
+        </h1>
+        <ul>
+            <li>Mern</li>
+            <li>Spring Boot</li>
+            <li>Cloud</li>
+            <li>Java</li>
+        </ul>
+    </div>
+    <div class="section-6">
+        <div class="flex-item">
+            <a href="tel:9489858821" target="_blank">
+                <i class="fa-solid fa-phone style"></i>
+            </a>
+            <a href="mailto:vasanthkrish.s2004@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope style"></i>
+            </a>
+            <a href="https://github.com/vasanthkrishnan" target="_blank">
+                <i class="fa-brands fa-github style"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vasanthkrish2004" target="_blank">
+                <i class="fa-brands fa-linkedin style"></i>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

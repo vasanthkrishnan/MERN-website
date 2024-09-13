@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .login-form {
+            width: 30vw;
+            height: 50vh;
+            display: flex;
+            border-radius: 7px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow:
+                0.4px 0.8px 1.9px rgba(0, 0, 0, 0.007),
+                1px 1.9px 4.3px rgba(0, 0, 0, 0.009),
+                1.8px 3.4px 7.7px rgba(0, 0, 0, 0.012),
+                3.1px 5.6px 12.8px rgba(0, 0, 0, 0.017),
+                5px 9.3px 21.2px rgba(0, 0, 0, 0.025),
+                8.8px 16.2px 37px rgba(0, 0, 0, 0.041),
+                19px 35px 80px rgba(0, 0, 0, 0.09)
+            ;
+        }
+        input {
+            padding: 10px;
+            border: none;
+            background-color: #e8e8e8;
+            border-radius: 7px;
+            width: 20vw;
+            height: 4vh;
+            font-size: 15px;
+            /* text-align: center; */
+            /* color: lightgray; */
+        }
+        .submit-btn {
+            width: 21vw;
+            height: 6vh;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: #7F00FF; 
+            background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  
+            background: linear-gradient(to right, #E100FF, #7F00FF); 
+            font-size: 20px;
+            text-align: center;
+            color: #f5f5f5;
+        }
+        .submit-btn:hover {
+            cursor: pointer;
+        }
+        .login-form:focus {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form action="" class="login-form">
+            <input type="text" name="" id="name" placeholder="Name">
+            <input type="tel" name="" id="mobile" placeholder="Mobile">
+            <input type="email" name="" id="email" placeholder="Email">
+            <input type="password" name="" id="password" placeholder="Password">
+            <input type="button" value="Register" class="submit-btn" onclick="getData()">
+        </form>
+    </div>
+</body>
+<script>
+
+    function getData() {
+        let name = document.getElementById("name").value;
+        let mobile = document.getElementById("mobile").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        
+
+        const data = {
+            username : name,
+            usermobile : mobile,
+            useremail : email,
+            userpassword : password
+        }
+
+        const {username, usermobile, useremail, userpassword} = data;
+        
+        function getName () {
+            console.log(username);
+        }
+
+        const getMail = () => console.log(useremail);
+
+        getName();
+        getMail();
+
+        let data1 = [1, 2, 3, 4];
+        let data2 = ["a", "b", "c", "d"];
+
+        let result = [...data1, false,  ...data2];
+        console.log(result);
+        
+        console.log("Name " + name);
+        console.log("Mobile " + mobile);
+        console.log("Email " + email);
+    }
+</script>
+</html>

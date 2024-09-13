@@ -15,7 +15,7 @@
         }
         .login-form {
             width: 30vw;
-            height: 50vh;
+            height: 60vh;
             display: flex;
             border-radius: 7px;
             flex-direction: column;
@@ -58,8 +58,8 @@
         .submit-btn:hover {
             cursor: pointer;
         }
-        .login-form:focus {
-            border: 1px solid gray;
+        .login-form input:focus {
+            border: none;
         }
     </style>
 </head>
@@ -70,46 +70,71 @@
             <input type="tel" name="" id="mobile" placeholder="Mobile">
             <input type="email" name="" id="email" placeholder="Email">
             <input type="password" name="" id="password" placeholder="Password">
-            <input type="button" value="Register" class="submit-btn" onclick="getData()">
+            <input type="number" name="" id="age" placeholder="Age">
+            <input type="button" value="Register" class="submit-btn" onclick="getData(event)">
         </form>
     </div>
 </body>
 <script>
 
-    function getData() {
+    function getData(e) {
         let name = document.getElementById("name").value;
         let mobile = document.getElementById("mobile").value;
         let email = document.getElementById("email").value;
         let password = document.getElementById("password").value;
-        
+        let age = document.getElementById("age").value;
 
-        const data = {
-            username : name,
-            usermobile : mobile,
-            useremail : email,
-            userpassword : password
+        e.preventDefault();
+
+        if(name !== "" && mobile !== "" && mobile.length == 10 && password !== "" && age != "")
+        {
+            console.log("Success");
         }
-
-        const {username, usermobile, useremail, userpassword} = data;
-        
-        function getName () {
-            console.log(username);
+        else if (mobile.length !== 10)
+        {
+            console.log("Invalid mobile number");
         }
-
-        const getMail = () => console.log(useremail);
-
-        getName();
-        getMail();
-
-        let data1 = [1, 2, 3, 4];
-        let data2 = ["a", "b", "c", "d"];
-
-        let result = [...data1, false,  ...data2];
-        console.log(result);
-        
-        console.log("Name " + name);
-        console.log("Mobile " + mobile);
-        console.log("Email " + email);
+        if(email !== "")
+        {
+            if(!email.includes("@gmail.com"))
+            {
+                console.log("Invalid email id");
+            }
+        }
+        else
+        {
+            console.log("None of the field should be empty");
+        }
     }
+        
+
+    //     const data = {
+    //         username : name,
+    //         usermobile : mobile,
+    //         useremail : email,
+    //         userpassword : password
+    //     }
+
+    //     const {username, usermobile, useremail, userpassword} = data;
+        
+    //     function getName () {
+    //         console.log(username);
+    //     }
+
+    //     const getMail = () => console.log(useremail);
+
+    //     getName();
+    //     getMail();
+
+    //     let data1 = [1, 2, 3, 4];
+    //     let data2 = ["a", "b", "c", "d"];
+
+    //     let result = [...data1, false,  ...data2];
+    //     console.log(result);
+        
+    //     console.log("Name " + name);
+    //     console.log("Mobile " + mobile);
+    //     console.log("Email " + email);
+    // }
 </script>
 </html>

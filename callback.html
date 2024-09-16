@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function success() {
+    //     console.log("Success!");
+    // }
+
+    // function fail() {
+    //     console.log("Fail :(");
+    // }
+
+    // function error() {
+    //     console.log("Error");
+    // }
+
+    // function exec(data, callback)
+    // {
+    //     console.log(`Balance : ${data}`);
+    //     setTimeout(callback, 3000);
+    // }
+
+    // function triger(data) {
+    //     if(data > 0)
+    //     {
+    //         exec(data, success);
+    //     }
+    //     else if(data <= 0)
+    //     {
+    //         exec(data, fail);
+    //     }
+    //     else
+    //     {
+    //         exec(data, error);
+    //     }
+    // }
+
+    // triger("Null");
+
+
+    async function getData() {
+    
+    try {
+        const request = await fetch('https://66e526db5cc7f9b6273c6ab5.mockapi.io/users');
+        const response = await request.json();
+        // console.table(response);
+        return response;
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function ApiData() {
+    const apiData = await getData();
+    const filteredData = apiData.filter(data => data.isActive)
+    console.log(filteredData);
+    const StructuredMapData = filteredData.map((data) => { console.log(data) });
+    // console.log(StructuredMapData);
+}
+
+ApiData();
+    // getData();
+
+
+function pro() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const x = true;
+            if(x)
+            {
+                resolve("success");
+            }
+            else
+            {
+                reject("error");
+            }
+        }, 3000);
+    })
+}
+
+pro
+().then(data => {console.log(data)}).catch(e => { console.log(e)});
+</script>
+</html>

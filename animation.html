@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        .red {
+            height: 8rem;
+            width: 8rem;
+            background-color: black;
+            transition: 3s background-color ease;
+        }
+        .red:hover {
+            background-color: red;
+        }
+        @keyframes myAnimation {
+            0% {
+                transform: translate(0vw) rotate(0deg);
+                border-radius: 0%;
+            }
+            /* 50% {
+                transform: translate(50vw) rotate(90deg);
+                border-radius: 25%;
+            } */
+            100% {
+                transform: translate(100vw) rotate(180deg);
+                border-radius: 50%;
+            }
+        }
+        .red {
+            animation: 4s myAnimation ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red"></div>
+    </div>
+</body>
+</html>
+
